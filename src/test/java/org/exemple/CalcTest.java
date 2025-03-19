@@ -1,12 +1,13 @@
-package org.example;
+package org.exemple;
 
+import org.example.Calc;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-public class Calctest {
+public class CalcTest {
 
     @Test
     @DisplayName("1 + 1 == 2")
@@ -63,19 +64,19 @@ public class Calctest {
     public void test10() {
         assertThat(Calc.run("10 - 10 - 10 - 10 + 10 + 10 - 10")).isEqualTo(-10);
     }
-//    @Test
-//    @DisplayName("10 * 10 * 10 == 1000")
-//    public void test11() {
-//        assertThat(Calc.run("10 * 10 * 10")).isEqualTo(1000);
-//    }
-//    @Test
-//    @DisplayName("10 + 5 * 2 == 20")
-//    public void test12() {
-//        assertThat(Calc.run("10 + 5 * 2")).isEqualTo(20);
-//    }
-
+    @Test
+    @DisplayName("10 * 10 * 10 == 1000")
+    public void test11() {
+        assertThat(Calc.run("10 * 10 * 10")).isEqualTo(1000);
+    }
+    @Test
+    @DisplayName("10 + 5 * 2 == 20")
+    public void test12() {
+        assertThat(Calc.run("10 + 5 * 2")).isEqualTo(20);
+    }
+    @Test
+    @DisplayName("10 * 20 + 10 + 5 * 2 == 220")
+    public void test13() {
+        assertThat(Calc.run("10 * 20 + 10 + 5 * 2")).isEqualTo(220);
+    }
 }
-
-
-
-
